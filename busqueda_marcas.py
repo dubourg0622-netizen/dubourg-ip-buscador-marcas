@@ -1,10 +1,10 @@
 buscador_marcas/
-│
-├── app.py
-├── busqueda_marcas.py
-├── requirements.txt
-├── todas las marcas uy -para busquedas-09-2025.xlsx
-├── Membretada-Uruguay - 2025.docx
+
+ app.py
+busqueda_marcas.py
+ requirements.txt
+todas las marcas uy -para busquedas-09-2025.xlsx
+Membretada-Uruguay - 2025.docx
 import pandas as pd
 import unicodedata
 from difflib import SequenceMatcher
@@ -150,3 +150,4 @@ try:
         os.system(f"xdg-open '{nombre_salida}'")
 except Exception as e:
     print(f"No se pudo abrir el archivo automáticamente: {e}")
+
