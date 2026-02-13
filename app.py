@@ -4,6 +4,42 @@ import unicodedata
 from difflib import SequenceMatcher
 from docx import Document
 import os
+st.set_page_config(
+    page_title="Dubourg IP – Trademark Risk Analysis",
+    layout="centered",
+)
+
+# -------------------------
+# ESTILO MINIMALISTA
+# -------------------------
+
+st.markdown("""
+    <style>
+    .main {
+        background-color: #ffffff;
+    }
+    h1 {
+        font-weight: 500;
+        letter-spacing: 0.5px;
+    }
+    .stButton>button {
+        background-color: #1C2A39;
+        color: white;
+        border-radius: 4px;
+        height: 40px;
+        width: 100%;
+        border: none;
+    }
+    .stButton>button:hover {
+        background-color: #2F3E4E;
+        color: white;
+    }
+    .stTextInput>div>div>input {
+        border-radius: 4px;
+    }
+    footer {visibility: hidden;}
+    </style>
+""", unsafe_allow_html=True)
 
 # ------------------------
 # Funciones
@@ -103,4 +139,5 @@ if st.button("Generar informe"):
             file_name=nombre_salida,
             mime="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         )
+
 
